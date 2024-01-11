@@ -19,14 +19,14 @@
 [user@sahara ~]$ cd lecture1
 [user@sahara ~/lecture1]$
 ```
-- `cd` with a directory takes you to the directory.
+- `cd` with a directory takes you to the directory as long as the directory exists.
 
 `cd` With A File
 ```
 [user@sahara ~/lecture1]$ cd Hello.java
 bash: cd: Hello.java: Not a directory
 ```
-- `cd` with a file does not take you to the file. It returns an error message stating the argument is not a file because `cd` is meant to travel between directories.
+- `cd` with a file does not take you to the file. It returns an error message stating the argument is not a directory because `cd` is meant to travel between directories.
 
 **`ls` Tests**
 
@@ -42,14 +42,14 @@ Hello.class  Hello.java  messages  README
 [user@sahara ~/lecture1]$ ls messages
 en-us.txt  es-mx.txt  fr.txt  zh-cn.txt
 ```
-- `ls` with a directory returns a list with the content of the directory passed as the argument.
+- `ls` with a directory returns a list with the content of the directory passed as the argument as long as the directory exists.
 
 `ls` With A File
 ```
 [user@sahara ~/lecture1]$ ls Hello.java
 Hello.java
 ```
-- `ls` with a file returns the name of the file.
+- `ls` with a file returns the name of the file as long as the file exists.
 
 **`cat` Tests**
 
@@ -66,7 +66,7 @@ duplicate my text
 [user@sahara ~/lecture1]$ cat messages
 cat: messages: Is a directory
 ```
-- `cat` does not print out the file. It returns an error message stating that the argument is a directory because `cat` is meant to be used to print the content of files.
+- `cat` does not print out the directory. It returns an error message stating that the argument is a directory because `cat` is meant to be used to print the content of files. It will also return an error if the directory does not exist.
 
 `cat` With A File
 ```
@@ -82,4 +82,4 @@ public class Hello {
     System.out.println(content);
   }
 ```
-- `cat` with a file prints out the content of the file.
+- `cat` with a file prints out the content of the file as long as the file exists.
