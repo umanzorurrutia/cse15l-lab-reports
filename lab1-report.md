@@ -1,10 +1,9 @@
 # Lab 1 Report
 > Jefferson Umanzor
-
 ---
 
 ## Command Tests
-**`cd` Tests**
+### `cd` Tests
 
 `cd` With No Arguments
 ```
@@ -14,44 +13,44 @@
 ```
 - `cd` with no arguments returns you to the home directory.
 
-`cd` With A Directory
+`cd` With A Directory Path
 ```
 [user@sahara ~]$ cd lecture1
 [user@sahara ~/lecture1]$
 ```
-- `cd` with a directory takes you to the directory as long as the directory exists.
+- `cd` with a directory path takes you to the directory as long as the directory exists.
 
-`cd` With A File
+`cd` With A File Path
 ```
-[user@sahara ~/lecture1]$ cd Hello.java
-bash: cd: Hello.java: Not a directory
+[user@sahara ~]$ cd lecture1/Hello.java
+bash: cd: lecture1/Hello.java: Not a directory
 ```
-- `cd` with a file does not take you to the file. It returns an error message stating the argument is not a directory because `cd` is meant to travel between directories.
+- `cd` with a file path does not take you to the file. It returns an error message stating the argument is not a directory because `cd` is meant to travel between directories.
 
-**`ls` Tests**
+### `ls` Tests
 
 `ls` With No Arguments
 ```
 [user@sahara ~/lecture1]$ ls
 Hello.class  Hello.java  messages  README
 ```
-- `ls` with no arguments returns a list of the contents of the current directory.
+- `ls` with no arguments returns a list of the contents of the current directory or returns an error message if you are currently inside a file because `ls` is meant to print the content of directories.
 
-`ls` With A Directory
+`ls` With A Directory Patb
 ```
-[user@sahara ~/lecture1]$ ls messages
+[user@sahara ~]$ ls lecture1/messages
 en-us.txt  es-mx.txt  fr.txt  zh-cn.txt
 ```
-- `ls` with a directory returns a list with the content of the directory passed as the argument as long as the directory exists.
+- `ls` with a directory path returns a list with the content of the directory passed as the argument as long as the directory exists.
 
-`ls` With A File
+`ls` With A File Path
 ```
-[user@sahara ~/lecture1]$ ls Hello.java
-Hello.java
+[user@sahara ~]$ ls lecture1/Hello.java
+lecture1/Hello.java
 ```
-- `ls` with a file returns the name of the file as long as the file exists.
+- `ls` with a file path returns the name of the file as long as the file exists.
 
-**`cat` Tests**
+### `cat` Tests
 
 `cat` With No Arguments
 ```
@@ -59,18 +58,18 @@ Hello.java
 duplicate my text
 duplicate my text
 ```
-- `cat` with no arguments allows you to input text that is outputted in return.
+- `cat` with no arguments allows you to input text that is outputted in return. Click Ctrl+C to exit.
 
-`cat` With A Directory
+`cat` With A Directory Path
 ```
-[user@sahara ~/lecture1]$ cat messages
-cat: messages: Is a directory
+[user@sahara ~]$ cat lecture1/messages
+cat: lecture1/messages: Is a directory
 ```
 - `cat` does not print out the directory. It returns an error message stating that the argument is a directory because `cat` is meant to be used to print the content of files. It will also return an error if the directory does not exist.
 
-`cat` With A File
+`cat` With A File Path
 ```
-[user@sahara ~/lecture1]$ cat Hello.java
+[user@sahara ~]$ cat lecture1/Hello.java
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -82,4 +81,4 @@ public class Hello {
     System.out.println(content);
   }
 ```
-- `cat` with a file prints out the content of the file as long as the file exists.
+- `cat` with a file path prints out the content of the file as long as the file exists.
