@@ -1,5 +1,5 @@
 # Lab 1 Report
-*Jefferson Umanzor*
+> Jefferson Umanzor
 
 ---
 
@@ -59,7 +59,7 @@ Hello.java
 duplicate my text
 duplicate my text
 ```
--- `cat` with no arguments allows you to input text that is outputted in return.
+- `cat` with no arguments allows you to input text that is outputted in return.
 
 `cat` With A Directory
 ```
