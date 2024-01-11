@@ -1,6 +1,6 @@
 # Lab 1 Report
 *Jefferson Umanzor*
-indicate if its an error
+
 ---
 
 ## Command Tests
