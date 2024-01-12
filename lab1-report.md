@@ -7,6 +7,8 @@
 
 `cd` With No Arguments
 ```
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
 [user@sahara ~/lecture1]$ cd
 [user@sahara ~]$ pwd
 /home
@@ -15,13 +17,18 @@
 
 `cd` With A Directory Path
 ```
+[user@sahara ~]$ pwd
+/home
 [user@sahara ~]$ cd lecture1
-[user@sahara ~/lecture1]$
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
 ```
 - `cd` with a directory path takes you to the directory as long as the directory exists.
 
 `cd` With A File Path
 ```
+[user@sahara ~]$ pwd
+/home
 [user@sahara ~]$ cd lecture1/Hello.java
 bash: cd: lecture1/Hello.java: Not a directory
 ```
@@ -31,6 +38,8 @@ bash: cd: lecture1/Hello.java: Not a directory
 
 `ls` With No Arguments
 ```
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
 [user@sahara ~/lecture1]$ ls
 Hello.class  Hello.java  messages  README
 ```
@@ -38,6 +47,8 @@ Hello.class  Hello.java  messages  README
 
 `ls` With A Directory Patb
 ```
+[user@sahara ~]$ pwd
+/home
 [user@sahara ~]$ ls lecture1/messages
 en-us.txt  es-mx.txt  fr.txt  zh-cn.txt
 ```
@@ -45,6 +56,8 @@ en-us.txt  es-mx.txt  fr.txt  zh-cn.txt
 
 `ls` With A File Path
 ```
+[user@sahara ~]$ pwd
+/home
 [user@sahara ~]$ ls lecture1/Hello.java
 lecture1/Hello.java
 ```
@@ -54,6 +67,8 @@ lecture1/Hello.java
 
 `cat` With No Arguments
 ```
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
 [user@sahara ~/lecture1]$ cat
 duplicate my text
 duplicate my text
@@ -62,6 +77,8 @@ duplicate my text
 
 `cat` With A Directory Path
 ```
+[user@sahara ~]$ pwd
+/home
 [user@sahara ~]$ cat lecture1/messages
 cat: lecture1/messages: Is a directory
 ```
@@ -69,6 +86,8 @@ cat: lecture1/messages: Is a directory
 
 `cat` With A File Path
 ```
+[user@sahara ~]$ pwd
+/home
 [user@sahara ~]$ cat lecture1/Hello.java
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
