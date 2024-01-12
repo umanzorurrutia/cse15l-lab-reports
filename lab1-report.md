@@ -45,7 +45,7 @@ Hello.class  Hello.java  messages  README
 ```
 - `ls` with no arguments returns a list of the contents of the current directory or returns an error message if you are currently inside a file because `ls` is meant to print the content of directories.
 
-`ls` With A Directory Patb
+`ls` With A Directory Path
 ```
 [user@sahara ~]$ pwd
 /home
