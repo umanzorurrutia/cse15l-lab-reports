@@ -61,7 +61,7 @@ en-us.txt  es-mx.txt  fr.txt  zh-cn.txt
 [user@sahara ~]$ ls lecture1/Hello.java
 lecture1/Hello.java
 ```
-- `ls` with a file path returns the name of the file as long as the file exists.
+- `ls` with a file path returns the path of the file as long as the file exists.
 
 ### `cat` Tests
 
