@@ -14,6 +14,7 @@
 /home
 ```
 - `cd` with no arguments returns you to the home directory.
+- In this example, the working directory was lecture1. I used `cd` to return to the home directory from the lecture1 directory.
 
 `cd` With A Directory Path
 ```
@@ -24,6 +25,7 @@
 /home/lecture1
 ```
 - `cd` with a directory path takes you to the directory as long as the directory exists.
+- In this example, the working directory was home. I used `cd` to change to the lecture1 directory from the home directory.
 
 `cd` With A File Path
 ```
@@ -33,6 +35,8 @@
 bash: cd: lecture1/Hello.java: Not a directory
 ```
 - `cd` with a file path does not take you to the file. It returns an error message stating the argument is not a directory because `cd` is meant to travel between directories.
+- In this example, the working directory was home. I attempted to travel to the file Hello.java using `cd`. Thus, an error returned because Hello.java is a file, not a directory.
+
 
 ### `ls` Tests
 
@@ -44,7 +48,8 @@ bash: cd: lecture1/Hello.java: Not a directory
 Hello.class  Hello.java  messages  README
 ```
 - `ls` with no arguments returns a list of the contents of the current directory or returns an error message if you are currently inside a file because `ls` is meant to print the content of directories.
-
+- In this example, the working directory was lecture1. I used `ls` while inside the lecture1 directory to return a list of the contents of the directory.
+  
 `ls` With A Directory Path
 ```
 [user@sahara ~]$ pwd
@@ -52,7 +57,8 @@ Hello.class  Hello.java  messages  README
 [user@sahara ~]$ ls lecture1/messages
 en-us.txt  es-mx.txt  fr.txt  zh-cn.txt
 ```
-- `ls` with a directory path returns a list with the content of the directory passed as the argument as long as the directory exists.
+- `ls` with a directory path returns a list with the directory's content as long as the directory exists.
+- In this example, the working directory was home. I used `ls` from the home directory and passed a path for the lecture1 directory to return a list of the contents of the lecture1 directory.
 
 `ls` With A File Path
 ```
@@ -62,6 +68,7 @@ en-us.txt  es-mx.txt  fr.txt  zh-cn.txt
 lecture1/Hello.java
 ```
 - `ls` with a file path returns the path of the file as long as the file exists.
+- In this example, the working directory was home. I used `ls` with the Hello.java file path which returned the Hello.java file path.
 
 ### `cat` Tests
 
@@ -74,6 +81,7 @@ duplicate my text
 duplicate my text
 ```
 - `cat` with no arguments allows you to input text that is outputted in return. Click Ctrl+C to exit.
+- In this example, the working directory was lecture1. I used `cat` with no argument which duplicated the input "duplicate my text."
 
 `cat` With A Directory Path
 ```
@@ -83,6 +91,7 @@ duplicate my text
 cat: lecture1/messages: Is a directory
 ```
 - `cat` does not print out the directory. It returns an error message stating that the argument is a directory because `cat` is meant to be used to print the content of files. It will also return an error if the directory does not exist.
+- In this example, the working directory was home. I used `cat` with a path to the messages directory which returned an error because messages is not a file.
 
 `cat` With A File Path
 ```
@@ -100,4 +109,5 @@ public class Hello {
     System.out.println(content);
   }
 ```
-- `cat` with a file path prints out the content of the file as long as the file exists.
+- `cat` with a file path prints out the file's content as long as the file exists.
+- In this example, the working directory was home. I used `cat` with a path to the Hello.java file which printed the content of the Hello.java file.
