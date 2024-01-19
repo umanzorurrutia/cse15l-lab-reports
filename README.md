@@ -3,7 +3,7 @@
 
 This is a collection of lab reports for CSE 15L at UC San Diego. 
 
-###Labs:
+### Labs:
 Lab 1
   * This report covers the `cd`, `ls`, and `cat` commands.
   * An example of the command with *no* arguments.
