@@ -27,7 +27,7 @@
 
 *Screenshot 2*
 
-![Message Two](https://github.com/umanzorurrutia/cse15l-lab-reports/blob/main/images/message-2.png)
+![Message Two](images/message-2.png)
 - In this screenshot, I entered the URL: `http://localhost:2024/add-message?s=Here is a second message.&user=Person`.
 - The `handleRequest` method then runs and takes the URL as an argument. The method encounters an `if statement` that calls the `getPath()` method and the String class' `equals()` method to determine whether the URL's path is empty.
 - The following `else if` statement calls the `getPath()` method and the String class' `equals()` method to obtain the current path and then calls the String class' `contains()` method with the path `"/add-message"` to determine if the proper path was passed.
