@@ -4,12 +4,12 @@
 ---
 
 ### `ChatServer.java` Code
-![Code](https://github.com/umanzorurrutia/cse15l-lab-reports/blob/main/images/lab2.png)
+![Code](images/lab2.png)
 
 ### Messages Query Showcase
 *Screenshot 1*
 
-![Message One](https://github.com/umanzorurrutia/cse15l-lab-reports/blob/main/images/message-1.png)
+![Message One](images/message-1.png)
 - In this screenshot, I entered the URL: `http://localhost:2024/add-message?s=This is my first message!&user=Jefferson`.
 - The `handleRequest` method then runs and takes the URL as a parameter. The method encounters an `if statement` that calls the `getPath()` method to determine whether the URL's path is empty. 
 
