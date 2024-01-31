@@ -40,10 +40,12 @@
 ## keygen Showcase
 
 *keygen Files*
+
 ![keygen Paths](/images/keygen-files.png)
 - I am inside the path `/Users/user/.ssh/` in this image. Using `ls` inside the path displayed the names of my private and public keys for my ieng login: `id_rsa` and `id_rsa.pub`. The absolute paths of each are `/Users/user/.ssh/id_rsa` and `/Users/user/.ssh/id_rsa.pub`.
 
 *Login Showcase*
+
 ![Login](/images/keygen-login.png)
 - I am not prompted for a password when I utilize my keygen and `ssh` into ieng6.
 
