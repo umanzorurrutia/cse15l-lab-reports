@@ -36,3 +36,17 @@
 - The outputted message is then added to the ArrayList `messages_list`, which contains all the messages, using the ArrayList class' `add()` method with the message passed as an argument. The message is derived using the String class' `format()` method, taking `parameters[2]`, the User, and `obtain_message[0]`, the message, as arguments, formatting them in the form `"%s: %s\n"`.
 - A String named `printed_output` is then created and runs through a `for loop` to concatenate each String, or `stored_message`, held within `messages_list`.
 - Lastly, the printed output is returned using the String class' `format()` method, with the argument `printed_output`, formatting the message as `%s`.
+
+## keygen Showcase
+
+*keygen Files*
+![keygen Paths](/images/keygen-files.png)
+- I am inside the path `/Users/user/.ssh/` in this image. Using `ls` inside the path displayed the names of my private and public keys for my ieng login: `id_rsa` and `id_rsa.pub`. The absolute paths of each are `/Users/user/.ssh/id_rsa` and `/Users/user/.ssh/id_rsa.pub`.
+
+*Login Showcase*
+![Login](/images/keygen-login.png)
+- I am not prompted for a password when I utilize my keygen and `ssh` into ieng6.
+
+### Takeaways
+
+- In the labs for weeks 2 and 3, I learned about keygens and ssh-ing. I believe that being able to `ssh` is a very powerful tool in the world of software, and being able to `ssh` without being prompted for a password due to a `keygen` is very convenient. In week 3, I also learned about Java web servers and was able to create a simple chat server.
