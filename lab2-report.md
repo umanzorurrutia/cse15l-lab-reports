@@ -43,6 +43,9 @@
 
 ![keygen Paths](/images/keygen-files.png)
 - I am inside the path `/Users/user/.ssh/` in this image. Using `ls` inside the path displayed the names of my private and public keys for my ieng login: `id_rsa` and `id_rsa.pub`. The absolute paths of each are `/Users/user/.ssh/id_rsa` and `/Users/user/.ssh/id_rsa.pub`.
+- 
+![keygen ieng6](/images/keygen-ieng6.png)
+- I am inside the path `/home/linux/ieng6/oce/18/618/jumanzorurrutia/.ssh` in this image. Using the `ls` inside the path displayed the names of my private and public keys for my ieng login: `id_rsa` and `id_rsa.pub`. The absolute paths of each are `/home/linux/ieng6/oce/18/618/jumanzorurrutia/.ssh/id_rsa` and `/home/linux/ieng6/oce/18/618/jumanzorurrutia/.ssh/id_rsa.pub`. `ls` also displayed the file `authorized_keys`, which contains a copy of the public `ssh` key. Its absolute path is `/home/linux/ieng6/oce/18/618/jumanzorurrutia/.ssh/authorized_keys`.
 
 *Login Showcase*
 
