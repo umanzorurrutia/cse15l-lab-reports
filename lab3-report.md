@@ -64,11 +64,16 @@
 
 ## Part Two: Researching Commands - Grep
 
-### Option One 
+### Option One
 #### `grep -n 'pattern' filename`
 *Source: `man grep` Terminal Command*
 - This command is known as the line number command. The command prints out the line and line number, in the form `<line number>: <line>`, that contains the specified pattern.
 - When used with multiple files as arguments, the output takes the form `<file name>:<line number>: <line>`.
-- When using the command `grep -n 'lectures' technical/*/*.txt` on the files inside the directories nested in the `./technical` directory (`911report`, `biomed`, `government`, `pios`). from lab 4, the following is outputted:
+- When using the command `grep -n 'lectures' technical/*/*.txt` on the files inside the directories nested in the `./technical` directory (`911report`, `biomed`, `government`, `pios`). from lab 4, the following occurs:
 
 ![Grep Sorted](images/grep-n-found.png)
+  - In the image above, the command `grep -n 'lectures' technical/*/*.txt` outputs seven different lines. Each line corresponds to a line containing the word "lectures" found inside the files held in the nested directories in `./technical`.
+  - The command works as follows:
+    - `grep -n 'lectures'` will search for the word "lectures" in the provided files and will output any line that contains the word "lectures" alongside its corresponding line number in the file.
+    - The argument `technical/*/*.txt` enters the `/technical` directory and searches through all of its contents using the `/technical/*` argument. Inside each directory found in `/technical`, all `.txt.` files are searched for and used as the arguments for the `grep -n` command using `/technical/*/*.txt/`.
+    - The word "lectures" is then searched for inside each `.txt`. For any instance of "lectures" found in a line, the following is outputted: `<file name>:<line number>: <line>`.
