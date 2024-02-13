@@ -58,9 +58,17 @@
 ![Fixed Code](images/fixed-reverse.png)
 - The method above is a fixed version of `reverseInPlace`, which intends to reverse the input `int[]` array in-place, i.e., without creating a new `int[]` array.
 - The method traverses through the first half of the array using a `for` loop and saves the value at the index in an `int` variable, `temp`.
-- The value at each of the indices in the first half of the array is then replaced with the value at its mirrored index, `arr.length - i - 1`.
+- The value at each index in the first half of the array is then replaced with the value at its mirrored index, `arr.length - i - 1`.
 - The value at the mirrored index, `arr.length - i - 1` is replaced with the value inside `temp`, swapping the values at index `i` and `arr.length - i - 1`.
 - This fixed the previous bug in the code, reversing the values in the array instead of mirroring the second half of the array onto the first half.
 
-## Part Two: Researching Commands
+## Part Two: Researching Commands - Grep
 
+### Option One 
+#### `grep -n 'pattern' filename`
+*Source: `man grep` Terminal Command*
+- This command is known as the line number command. The command prints out the line and line number, in the form `<line number>: <line>`, that contains the specified pattern.
+- When used with multiple files as arguments, the output takes the form `<file name>:<line number>: <line>`.
+- When using the command `grep -n 'lectures' technical/*/*.txt` on the files inside the directories nested in the `./technical` directory (`911report`, `biomed`, `government`, `pios`). from lab 4, the following is outputted:
+
+![Grep Sorted](images/grep-n-found.png)
