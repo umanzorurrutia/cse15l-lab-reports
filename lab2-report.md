@@ -9,7 +9,7 @@
 ---
 
 ### `ChatServer.java` Code
-![Code](images/lab2.png)
+![Code](images/lab2-code.png)
 
 ## Messages Query Showcase
 
@@ -22,6 +22,7 @@
 - The URL query is then split using the String class' `equals()` method, utilizing the `=` argument. It is held within the String array `parameters`, separating the query received from `getQuery()` into `[s, <string>&user, <string>]`.
 - The String class' `equals()` method is called once more to determine if `parameters[0]` is equal to `s`. If so, `parameters[1]`, `[<string>&user]`, is split using the String class' `equals()` method with the argument `&`. Thus, the String array `obtain_message` holds `[<string>, user]`.
 - The outputted message is then added to the ArrayList `messages_list`, which contains all the messages, using the ArrayList class' `add()` method with the message passed as an argument. The message is derived using the String class' `format()` method, taking `parameters[2]`, the User, and `obtain_message[0]`, the message, as arguments, formatting them in the form `"%s: %s\n"`.
+  - The ArrayList `messages_list` will add a new message in the format `<user>: <string>` each time a valid use of the `/add-message` is called. Restarting the server will cause the ArrayList `messages_list` to become empty. In this case, since `/add-message` is only validly called once, `messages_list` only contains one String.
 - A String named `printed_output` is then created and runs through a `for loop` to concatenate each String, or `stored_message`, held within `messages_list`.
 - Lastly, the printed output is returned using the String class' `format()` method, with the argument `printed_output`, formatting the message as `%s`.
 
@@ -34,6 +35,7 @@
 - The URL query is then split using the String class' `equals()` method, utilizing the `=` argument. It is held within the String array `parameters`, separating the query received from `getQuery()` into `[s, <string>&user, <string>]`.
 - The String class' `equals()` method is called once more to determine if `parameters[0]` is equal to `s`. If so, `parameters[1]`, `[<string>&user]`, is split using the String class' `equals()` method with the argument `&`. Thus, the String array `obtain_message` holds `[<string>, user]`.
 - The outputted message is then added to the ArrayList `messages_list`, which contains all the messages, using the ArrayList class' `add()` method with the message passed as an argument. The message is derived using the String class' `format()` method, taking `parameters[2]`, the User, and `obtain_message[0]`, the message, as arguments, formatting them in the form `"%s: %s\n"`.
+  - The ArrayList `messages_list` will add a new message in the format `<user>: <string>` each time a valid use of the `/add-message` is called. Restarting the server will cause the ArrayList `messages_list` to become empty. In this case, since `/add-message` has already been validly called once, and is now called validly again, `messages_list` contains both the previous String and the new String.
 - A String named `printed_output` is then created and runs through a `for loop` to concatenate each String, or `stored_message`, held within `messages_list`.
 - Lastly, the printed output is returned using the String class' `format()` method, with the argument `printed_output`, formatting the message as `%s`.
 
