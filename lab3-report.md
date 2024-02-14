@@ -144,4 +144,26 @@ CSE 197-->
   - The word "python" is then searched for inside each `.txt`. For any instance of "python" found in a line, the following is outputted: `<file name>:<line number>: <line>` with the word "python" colored. Due to none of the files containing the word "python," nothing is outputted.
  
 ### Option Four
-#### `grep - 'pattern' filename`
+#### `grep -h 'pattern' filename`
+*Source: `man grep` Terminal Command*
+- This command is known as the no filename command. The command prints out the pattern if it is found in the file argument in the form `<pattern>`, that contains the specified pattern.
+- When used with multiple files as arguments, the output takes the form `<pattern>`.
+- When using the command `grep -h 'pattern' technical/*/*.txt` on the files inside the directories nested in the `./technical` directory (`911report`, `biomed`, `government`, `pios`). from lab 4, the following occurs:
+
+- `grep -h` when the pattern is found
+
+![Grep Found](images/grep-h-found.png)
+- In the image above, the command `grep -h 'lectures' technical/*/*.txt` outputs seven different lines. Each line corresponds to the word "lectures" found inside the files held in the nested directories in `./technical`.
+- The command works as follows:
+  - `grep -h 'lectures'` will search for the word "lectures" in the provided files and will output the word if found.
+  - The argument `technical/*/*.txt` enters the `/technical` directory and searches through all of its contents using the `/technical/*` argument. Inside each directory found in `/technical`, all `.txt.` files are searched for and used as the arguments for the `grep -h` command using `/technical/*/*.txt/`.
+  - The word "lectures" is then searched for inside each `.txt`. For any instance of "lectures" found in a line, the following is outputted: `<pattern>`.
+
+`grep -h` when pattern is not found
+
+![Grep Not Found](images/grep-h-notfound.png)
+- In the image above, the command `grep -h 'python' technical/*/*.txt` outputs nothing because "python" is not contained in any of the `.txt` files inside of the nested directories in `./technical`.
+- The command works as follows:
+  - `grep -h 'python'` will search for the word "python" in the provided files and will output the word if found.
+  - The argument `technical/*/*.txt` enters the `/technical` directory and searches through all of its contents using the `/technical/*` argument. Inside each directory found in `/technical`, all `.txt.` files are searched for and used as the arguments for the `grep -h` command using `/technical/*/*.txt/`.
+  - The word "python" is then searched for inside each `.txt`. For any instance of "python" found in a line, the following is outputted: `<pattern>`. Due to none of the files containing the word "python," nothing is outputted.
