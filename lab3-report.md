@@ -3,6 +3,10 @@
   Winter 2023 Quarter
 -->
 
+<!-- michael, neeraj, nathan 
+CSE 193 CSE 199/199H
+CSE 197-->
+
 # Lab Report 3
 ### Jefferson Umanzor
 
@@ -69,11 +73,75 @@
 *Source: `man grep` Terminal Command*
 - This command is known as the line number command. The command prints out the line and line number, in the form `<line number>: <line>`, that contains the specified pattern.
 - When used with multiple files as arguments, the output takes the form `<file name>:<line number>: <line>`.
-- When using the command `grep -n 'lectures' technical/*/*.txt` on the files inside the directories nested in the `./technical` directory (`911report`, `biomed`, `government`, `pios`). from lab 4, the following occurs:
+- When using the command `grep -n 'pattern' technical/*/*.txt` on the files inside the directories nested in the `./technical` directory (`911report`, `biomed`, `government`, `pios`). from lab 4, the following occurs:
 
-![Grep Sorted](images/grep-n-found.png)
-  - In the image above, the command `grep -n 'lectures' technical/*/*.txt` outputs seven different lines. Each line corresponds to a line containing the word "lectures" found inside the files held in the nested directories in `./technical`.
-  - The command works as follows:
-    - `grep -n 'lectures'` will search for the word "lectures" in the provided files and will output any line that contains the word "lectures" alongside its corresponding line number in the file.
-    - The argument `technical/*/*.txt` enters the `/technical` directory and searches through all of its contents using the `/technical/*` argument. Inside each directory found in `/technical`, all `.txt.` files are searched for and used as the arguments for the `grep -n` command using `/technical/*/*.txt/`.
-    - The word "lectures" is then searched for inside each `.txt`. For any instance of "lectures" found in a line, the following is outputted: `<file name>:<line number>: <line>`.
+`grep -n` when the pattern is found
+
+![Grep Found](images/grep-n-found.png)
+- In the image above, the command `grep -n 'lectures' technical/*/*.txt` outputs seven different lines. Each line corresponds to a line containing the word "lectures" found inside the files held in the nested directories in `./technical`.
+- The command works as follows:
+  - `grep -n 'lectures'` will search for the word "lectures" in the provided files and will output any line that contains the word "lectures" alongside its corresponding line number in the file.
+  - The argument `technical/*/*.txt` enters the `/technical` directory and searches through all of its contents using the `/technical/*` argument. Inside each directory found in `/technical`, all `.txt.` files are searched for and used as the arguments for the `grep -n` command using `/technical/*/*.txt/`.
+  - The word "lectures" is then searched for inside each `.txt`. For any instance of "lectures" found in a line, the following is outputted: `<file name>:<line number>: <line>`.
+
+`grep -n` when pattern is not found
+
+![Grep Not Found](images/grep-n-notfound.png)
+- In the image above, the command `grep -n 'python' technical/*/*.txt` outputs nothing because "python" is not contained in any of the `.txt` files inside of the nested directories in `./technical`.
+- The command works as follows:
+  - `grep -n 'python'` will search for the word "python" in the provided files and will output any line that contains the word "python" alongside its corresponding line number in the file.
+  - The argument `technical/*/*.txt` enters the `/technical` directory and searches through all of its contents using the `/technical/*` argument. Inside each directory found in `/technical`, all `.txt.` files are searched for and used as the arguments for the `grep -n` command using `/technical/*/*.txt/`.
+  - The word "python" is then searched for inside each `.txt`. For any instance of "python" found in a line, the following is outputted: `<file name>:<line number>: <line>`. Due to none of the files containing the word "python," nothing is outputted.
+ 
+### Option Two
+#### `grep -o 'pattern' filename`
+*Source: `man grep` Terminal Command*
+- This command is known as the only matching command. The command prints out the pattern if it is found in the file argument in the form `<pattern>`, that contains the specified pattern.
+- When used with multiple files as arguments, the output takes the form `<file name>:<pattern>`.
+- When using the command `grep -o 'pattern' technical/*/*.txt` on the files inside the directories nested in the `./technical` directory (`911report`, `biomed`, `government`, `pios`). from lab 4, the following occurs:
+
+- `grep -o` when the pattern is found
+
+![Grep Found](images/grep-o-found.png)
+- In the image above, the command `grep -o 'lectures' technical/*/*.txt` outputs seven different lines. Each line corresponds to the word "lectures" found inside the files held in the nested directories in `./technical`.
+- The command works as follows:
+  - `grep -o 'lectures'` will search for the word "lectures" in the provided files and will output the word if found.
+  - The argument `technical/*/*.txt` enters the `/technical` directory and searches through all of its contents using the `/technical/*` argument. Inside each directory found in `/technical`, all `.txt.` files are searched for and used as the arguments for the `grep -o` command using `/technical/*/*.txt/`.
+  - The word "lectures" is then searched for inside each `.txt`. For any instance of "lectures" found in a line, the following is outputted: `<file name>:<pattern>`.
+
+`grep -o` when pattern is not found
+
+![Grep Not Found](images/grep-o-notfound.png)
+- In the image above, the command `grep -o 'python' technical/*/*.txt` outputs nothing because "python" is not contained in any of the `.txt` files inside of the nested directories in `./technical`.
+- The command works as follows:
+  - `grep -o 'python'` will search for the word "python" in the provided files and will output the word if found.
+  - The argument `technical/*/*.txt` enters the `/technical` directory and searches through all of its contents using the `/technical/*` argument. Inside each directory found in `/technical`, all `.txt.` files are searched for and used as the arguments for the `grep -o` command using `/technical/*/*.txt/`.
+  - The word "python" is then searched for inside each `.txt`. For any instance of "python" found in a line, the following is outputted: `<file name>:<pattern>`. Due to none of the files containing the word "python," nothing is outputted.
+ 
+### Option Three
+#### `grep --color=auto 'pattern' filename`
+*Source: `man grep` Terminal Command*
+- This command is known as the color command. The command prints out the line and line number, in the form `<line number>: <line>`, that contains the specified pattern and colors the pattern in the line.
+- When used with multiple files as arguments, the output takes the form `<file name>:<line number>: <line>` and colors the pattern in the line.
+- When using the command `grep -n 'pattern' technical/*/*.txt` on the files inside the directories nested in the `./technical` directory (`911report`, `biomed`, `government`, `pios`). from lab 4, the following occurs:
+
+`grep --color=auto` when the pattern is found
+
+![Grep Found](images/grep-color-found.png)
+- In the image above, the command `grep --color=auto 'lectures' technical/*/*.txt` outputs seven different lines. Each line corresponds to a line containing the word "lectures" found inside the files held in the nested directories in `./technical` and has the word "lectures" colored.
+- The command works as follows:
+  - `grep --color=auto 'lectures'` will search for the word "lectures" in the provided files and will output any line that contains the word "lectures" alongside its corresponding line number in the file and will color the word "lectures."
+  - The argument `technical/*/*.txt` enters the `/technical` directory and searches through all of its contents using the `/technical/*` argument. Inside each directory found in `/technical`, all `.txt.` files are searched for and used as the arguments for the `grep --color=auto` command using `/technical/*/*.txt/`.
+  - The word "lectures" is then searched for inside each `.txt`. For any instance of "lectures" found in a line, the following is outputted: `<file name>:<line number>: <line>` with the word "lectures" colored.
+
+`grep --color=auto` when pattern is not found
+
+![Grep Not Found](images/grep-color-notfound.png)
+- In the image above, the command `grep --color=auto 'python' technical/*/*.txt` outputs nothing because "python" is not contained in any of the `.txt` files inside of the nested directories in `./technical`.
+- The command works as follows:
+  - `grep --color=auto 'python'` will search for the word "python" in the provided files and will output any line that contains the word "python" alongside its corresponding line number in the file and will color the word "python."
+  - The argument `technical/*/*.txt` enters the `/technical` directory and searches through all of its contents using the `/technical/*` argument. Inside each directory found in `/technical`, all `.txt.` files are searched for and used as the arguments for the `grep --color=auto` command using `/technical/*/*.txt/`.
+  - The word "python" is then searched for inside each `.txt`. For any instance of "python" found in a line, the following is outputted: `<file name>:<line number>: <line>` with the word "python" colored. Due to none of the files containing the word "python," nothing is outputted.
+ 
+### Option Four
+#### `grep - 'pattern' filename`
