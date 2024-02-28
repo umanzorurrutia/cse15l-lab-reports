@@ -26,7 +26,7 @@
 *Buggy Code*
 
 ![Code](images/vim-before-lab4.png)
-- This screenshot displays the buggy code in the `lab7/ListExamples.java` file. To reach this screen, I typed `vim ListExamples.java` and clicked `<enter>` while inside `lab7`. To reach the bug, I clicked `<up><up><up><up><up><up>` and `<right><right><right><right><right><right><right><right><right><right><right>`. This took me to the number `1` in `index1` under the comment `// change index1 below to index2 to fix the test`.
+- This screenshot displays the buggy code in the `lab7/ListExamples.java` file. To reach this screen, I typed `vim ListExamples.java` and clicked `<enter>` while inside `lab7`. My cursor began at the bottom of the file. To reach the bug, I clicked `<up><up><up><up><up><up>` and `<right><right><right><right><right><right><right><right><right><right><right>`. This took me to the number `1` in `index1` under the comment `// change index1 below to index2 to fix the test`.
 
 *Fixed Code*
 
