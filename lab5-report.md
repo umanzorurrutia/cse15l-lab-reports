@@ -148,8 +148,8 @@ java Fibonacci
 ```
 
 ## Command Line Input To Trigger Bug
-- To encounter the bug the first time, while inside the `Lab-Report-5/` directory, I typed `bash<space>factorial-runner.sh` and clicked `<enter>`. Then I clicked `3` and `<enter>`. Then I clicked `4` and `<enter>`. Then I clicked `5` and `<enter>`. Then I typed `Done` and clicked `<enter>`. The originals values were `[3, 4, 5]` and the output was `[0, 0, 0]`.
-- To encounter the bug the second time, while inside the `Lab-Report-5/` directory, I typed `bash<space>factorial-runner.sh` and clicked `<enter>`. Then I clicked `0` and `<enter>`. Then I clicked `5` and `<enter>`. Then I clicked `10` and `<enter>`. Then I typed `Done` and clicked `<enter>`. The originals values were `[0, 5, 10]` and the output was `[0, 0, 0]`.
+- To encounter the bug the first time, while inside the `Lab-Report-5/` directory, I typed `bash<space>factorial-runner.sh` and clicked `<enter>`. Then I clicked `3` and `<enter>`. Then I clicked `4` and `<enter>`. Then I clicked `5` and `<enter>`. Then I typed `Done` and clicked `<enter>`. The original values were `[3, 4, 5]` and the output was `[0, 0, 0]`.
+- To encounter the bug the second time, while inside the `Lab-Report-5/` directory, I typed `bash<space>factorial-runner.sh` and clicked `<enter>`. Then I clicked `0` and `<enter>`. Then I clicked `5` and `<enter>`. Then I clicked `10` and `<enter>`. Then I typed `Done` and clicked `<enter>`. The original values were `[0, 5, 10]` and the output was `[0, 0, 0]`.
 
 ## Bug Fix
 The bug was found inside the `fibonacci()` method in the `Fibonacci.java` file. The bug is as follows:
@@ -173,3 +173,6 @@ private static int fibonacci(int value) {
     }
 ```
 The fixed code returns `value` when the `value` is equal to 0 or 1, inducing the proper function of the `fibonacci()` method.
+
+## Reflection
+In the second half of the quarter, I learned a lot about the testing process and how powerful Bash scripts are. Being able to create grading scripts hands-on and following the process of designing a tester, implementing it, and fixing bugs was crucial in understanding the complexities of the grading process. I am now highly confident in my ability to locate and fix bugs in my code and in my ability to execute scripts in Bash.
